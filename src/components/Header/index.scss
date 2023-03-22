@@ -1,0 +1,15 @@
+.header {
+  //flex布局
+  display: flex;
+  width: 80%;
+  height: 100%;
+  //flex around,center
+  justify-content: space-around;
+  align-items: center;
+  //居中
+  margin: auto;
+  //font
+  font-size: 2.5vh;
+  //z-indx
+  z-index: 4;
+}

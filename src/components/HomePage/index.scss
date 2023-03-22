@@ -1,0 +1,46 @@
+@import "../../assets/public.scss";
+
+.homePage {
+  //隐藏溢出
+  overflow: hidden;
+  //grid布局
+  display: grid;
+  grid-template-rows: $header-height 1fr;
+  //relative
+  position: relative;
+  z-index: 1;
+
+  /* mainCont */
+  > .mainCont {
+    background-color: aquamarine;
+    height: 100%;
+    width: 100vw;
+    //padding-top 留出空间
+    padding-top: 5vh;
+    //防止目标区域的滚动触发父元素的滚动
+    overscroll-behavior: contain;
+    overflow: scroll;
+    //绝对定位
+    position: absolute;
+    top: $header-height;
+    z-index: 2;
+    //flex布局
+    display: flex;
+
+    /* 亲子类 */
+    > div {
+      height: 200vh;
+      width: 100vw-2 * $init-distance;
+      background-color: darksalmon;
+      margin: 0 $init-distance;
+      //flex子元素不自动增长/收缩
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.contBox {
+  //intit margin
+  // margin: 0 $init-distance;
+}

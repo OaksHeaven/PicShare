@@ -1,0 +1,11 @@
+@import "../../assets/public.scss";
+
+.storage {
+  //position abosolute
+  position: absolute;
+  top: $header-height;
+  height: $storage-height;
+  width: 100vw-2 * $init-distance;
+  left: $init-distance;
+  z-index: 3;
+}
